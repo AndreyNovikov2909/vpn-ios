@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		993AC8DF2876E7EB009FD9E2 /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 993AC8DE2876E7EB009FD9E2 /* Networking.framework */; };
+		993AC8E12876E7EB009FD9E2 /* Utilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 993AC8E02876E7EB009FD9E2 /* Utilities.framework */; };
+		993AC8E42876E80B009FD9E2 /* InjectionContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993AC8E32876E80B009FD9E2 /* InjectionContainer.swift */; };
+		993AC8E82876EA44009FD9E2 /* VPNInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993AC8E72876EA44009FD9E2 /* VPNInjection.swift */; };
 		99A9C39C286D595B0028CBB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A9C39B286D595B0028CBB7 /* AppDelegate.swift */; };
 		99A9C39E286D595B0028CBB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A9C39D286D595B0028CBB7 /* SceneDelegate.swift */; };
 		99A9C3A0286D595B0028CBB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A9C39F286D595B0028CBB7 /* ViewController.swift */; };
@@ -37,6 +41,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		993AC8DE2876E7EB009FD9E2 /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		993AC8E02876E7EB009FD9E2 /* Utilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Utilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		993AC8E32876E80B009FD9E2 /* InjectionContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionContainer.swift; sourceTree = "<group>"; };
+		993AC8E72876EA44009FD9E2 /* VPNInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VPNInjection.swift; sourceTree = "<group>"; };
 		99A9C398286D595B0028CBB7 /* vpn-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vpn-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99A9C39B286D595B0028CBB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99A9C39D286D595B0028CBB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				993AC8DF2876E7EB009FD9E2 /* Networking.framework in Frameworks */,
+				993AC8E12876E7EB009FD9E2 /* Utilities.framework in Frameworks */,
 				99A9C487286D66340028CBB7 /* CommonUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +113,23 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		993AC8DC2876E7D4009FD9E2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				993AC8DD2876E7DA009FD9E2 /* Injection */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		993AC8DD2876E7DA009FD9E2 /* Injection */ = {
+			isa = PBXGroup;
+			children = (
+				993AC8E72876EA44009FD9E2 /* VPNInjection.swift */,
+				993AC8E32876E80B009FD9E2 /* InjectionContainer.swift */,
+			);
+			path = Injection;
+			sourceTree = "<group>";
+		};
 		99A9C38F286D595B0028CBB7 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +154,7 @@
 		99A9C39A286D595B0028CBB7 /* VPN IOS Application */ = {
 			isa = PBXGroup;
 			children = (
+				993AC8DC2876E7D4009FD9E2 /* Common */,
 				993AC87A2876CF75009FD9E2 /* Sources */,
 				99A9C39B286D595B0028CBB7 /* AppDelegate.swift */,
 				99A9C39D286D595B0028CBB7 /* SceneDelegate.swift */,
@@ -159,6 +187,8 @@
 		99A9C3FE286D5A5C0028CBB7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				993AC8DE2876E7EB009FD9E2 /* Networking.framework */,
+				993AC8E02876E7EB009FD9E2 /* Utilities.framework */,
 				99A9C486286D66340028CBB7 /* CommonUI.framework */,
 				99A9C488286D66340028CBB7 /* Networking.framework */,
 			);
@@ -253,6 +283,9 @@
 				Base,
 			);
 			mainGroup = 99A9C38F286D595B0028CBB7;
+			packageReferences = (
+				993AC8E22876E7FB009FD9E2 /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = 99A9C399286D595B0028CBB7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -297,7 +330,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				99A9C3A0286D595B0028CBB7 /* ViewController.swift in Sources */,
+				993AC8E42876E80B009FD9E2 /* InjectionContainer.swift in Sources */,
 				99A9C39C286D595B0028CBB7 /* AppDelegate.swift in Sources */,
+				993AC8E82876EA44009FD9E2 /* VPNInjection.swift in Sources */,
 				99A9C39E286D595B0028CBB7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,6 +675,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		993AC8E22876E7FB009FD9E2 /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 	};
 	rootObject = 99A9C390286D595B0028CBB7 /* Project object */;
 }
